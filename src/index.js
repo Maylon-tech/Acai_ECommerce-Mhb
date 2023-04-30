@@ -6,11 +6,15 @@ import './index.css'
 import "bootstrap/dist/css/bootstrap.css"
 import "remixicon/fonts/remixicon.css"
 
+import { BrowserRouter as Router } from 'react-router-dom'
+
 const container = document.getElementById('root')
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
+    <Router>
       <App />
+    </Router>
   </React.StrictMode>
 )

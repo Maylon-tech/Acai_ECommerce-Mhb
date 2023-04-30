@@ -1,13 +1,13 @@
 import React from 'react'
 import './App.css'
 
+import Layout from './components/Layout/Layout'
+
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-       <h2>Nemoto</h2>
-      </header>
-    </div>
+    <>
+      <Layout />
+    </>
   )
 }
 
