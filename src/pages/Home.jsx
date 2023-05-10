@@ -53,7 +53,7 @@ const Home = () => {
 
             <Col lg='6' md='6'>
               <div className="hero_image">
-                <img src={heroImg} alt="heor-img" />
+                <img width="320px"  src={heroImg} alt="heor-img" />
               </div>
             </Col>
           </Row>
