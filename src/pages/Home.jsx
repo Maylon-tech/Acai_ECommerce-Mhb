@@ -1,7 +1,12 @@
 import React from 'react'
 import Helmet from '../components/Helmet/Helmet'
 import { Container, Row, Col } from 'reactstrap'
-import heroImg from '../assets/images/heroImage.jpg'
+
+import heroImg from '../assets/images/hero.png'
+import banner from '../assets/acai banner.jpeg'
+
+import { features } from '../assets/fake-data/features'
+
 import '../styles/Hero-Content.css'
 import { Link } from 'react-router-dom'
 
@@ -9,7 +14,7 @@ const Home = () => {
   return (
     <Helmet title="home">
       <section>
-        <Container>
+        <Container style={{ border: "1px solid orange"}}>
           <Row>
             <Col lg='6' md='6'>
               <div className="hero_content">
@@ -53,9 +58,54 @@ const Home = () => {
 
             <Col lg='6' md='6'>
               <div className="hero_image">
-                <img width="320px"  src={heroImg} alt="heor-img" />
+                <img src={heroImg} alt="heor-img" />
               </div>
             </Col>
+          </Row>
+        </Container>
+
+        <Container>
+          <Row>
+            <div className="banner-container">
+              <img src={banner} alt="banner Home" />
+            </div>
+          </Row>
+        </Container>
+
+        <Container>
+          <Row>
+            <h1>Novidades</h1>
+            <div className="container-feature">
+              {
+                features.map((feature) => (
+                  
+
+                    <div className="card" key={feature.id}>
+                      <div className='imageFeature'>
+                        <img src={feature.img} alt="img1" />
+                      </div>
+                      <div>
+                        <h2>{feature.title}</h2>
+                        <div className="price">
+                          <h3>{feature.price}</h3>
+                          <span>{feature.descont}</span>
+                        </div>
+                      </div>
+                      <button className='buttonFeature'>Saiba Mais</button>
+                    </div>
+
+              
+                ))
+              }
+            </div>
+          </Row>
+
+          <Row>
+            <h1>sabores Exclusivos</h1>
+          </Row>
+
+          <Row>
+            <h1>Salgados</h1>
           </Row>
         </Container>
       </section>
